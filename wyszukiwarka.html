@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyszukiwarka</title>
+    <link rel="stylesheet" href="styles/searchstyles.css">
+</head>
+<body>
+    <body>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="main.html">Strona główna</a>
+            <a href="wyszukiwarka.html">Wyczyść</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+
+        <h1>Wyszukiwarka samochodów</h1>
+        <form id="searchForm">
+            <input style="color: #000000;" type="text" id="searchInput" placeholder="Szukaj po modelu, marce lub roku" >
+            <button type="submit">Szukaj</button>
+            <button type="submit">Wyświetl</button>
+        </form>
+        <div id="carList" class="car-container"></div>
+        <script>
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchInput = document.getElementById('searchInput').value;
+                const formData = new FormData();
+                formData.append('search', searchInput);
+    
+                fetch(`http://localhost/projekt/proxy.php?search=${searchInput}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        showCars(data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+    
+            function showCars(cars) {
+                const carList = document.getElementById('carList');
+                carList.innerHTML = '';
+                cars.forEach((car, index) => {
+                    const carDiv = document.createElement('div');
+                    carDiv.classList.add('car');
+                    carDiv.innerHTML = `
+                        <div class="car-box">
+                            <p><strong>Marka:</strong> ${car.make}</p>
+                            <p><strong>Model:</strong> ${car.model}</p>
+                            <p><strong>Rok produkcji:</strong> ${car.year}</p>
+                            <p><strong>Cena katalogowa:</strong> $${car.price}</p>
+                        </div>
+                    `;
+                    carList.appendChild(carDiv);
+                });
+            }
+        </script>
+</body>
+</html>

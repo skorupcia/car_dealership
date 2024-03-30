@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaloguj</title>
+    <link rel="stylesheet" href="styles/loginstyles.css">
+    <style>
+    </style>
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+      <form class="loginform" id="loginForm">
+        <input type="text" id="username" placeholder="login"/>
+        <input type="password" id="password" placeholder="haslo"/>
+        <button type="submit">Zaloguj</button>
+        <p class="message">Nie chcesz być zalogowany? <a href="main.html">Strona główna</a></p>
+        <div id="error" style="color: red; font-size: 13px; margin-top: 10px; font-weight: bold;"></div>
+      </form>
+    </div>
+  </div>
+    <footer class="footer">
+        <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
+    </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            login();
+        });
+    });
+
+    function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        fetch('http://localhost:8000/users.json')
+        .then(response => response.json())
+        .then(users => {
+            var isValid = users.some(function(user) {
+                return user.username === username && user.password === password;
+            });
+
+            if (isValid) {
+                window.location.href = "main.html";
+            } else {
+                showError("Nieprawidłowy login lub haslo.");
+            }
+        })
+        .catch(error => {
+            console.error('error users.json:', error);
+            showError("server error");
+        });
+    }
+
+    function showError(message) {
+        var errorElement = document.getElementById("error");
+        if (errorElement) {
+            errorElement.innerHTML = message;
+        } else {
+            alert(message);
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skontaktuj się</title>
+    <link rel="stylesheet" href="styles/contactstyles.css">
+</head>
+<body>
+    <body>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="main.html">Strona główna</a>
+            <a href="wyszukiwarka.html">Wyszukiwarka</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
+        <div class="razem">
+          <div class="formularz">
+            <p style="color: black; font-size: larger;">FORMULARZ KONTAKTOWY</p>
+            <form method="POST" name="contact_form" action="fomrsite.php">
+              <label for="fname">Imie</label>
+              <input type="text" id="fname" name="firstname" placeholder="Wpisz imie">
+          
+              <label for="lname">Nazwisko</label>
+              <input type="text" id="lname" name="lastname" placeholder="Wpisz nazwisko">
+  
+              <label for="tel">Numer Telefonu</label>
+              <input type="text" id="tel" name="tel" placeholder="Wpisz nr telefonu">
+          
+              <label for="reason">Powód</label>
+              <select id="reason" name="reason">
+                <option value="def">Wybierz powód</option>
+                <option value="Brak samochodu">Brak samochodu</option>
+                <option value="Negocjacja">Negocjacja ceny</option>
+                <option value="Gwarancja">Gwarancja</option>
+              </select>
+  
+              <label for="mes">Wiadomość</label>
+              <input type="text" id="mes" name="mes" placeholder="napisz wiadomość">
+            
+              <input type="submit" value="Wyślij">
+            </form>
+          </div>
+          <div class="mapy">
+            <p style="color: black; font-size: larger;">ZNAJDZ NAS</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295779.83488378045!2d18.069508404683916!3d54.607868886916556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fda0ec3199646d%3A0xe08b90c074589413!2sDealer%20BMW%20Zdunek%20Gdynia!5e0!3m2!1spl!2spl!4v1711797593190!5m2!1spl!2spl" width="100%" height="89%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <footer class="footer">
+          <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
+      </footer>
+</body>
+</html>
