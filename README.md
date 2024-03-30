@@ -23,3 +23,6 @@ Python: 3.12.2
 <img width="1728" alt="Zrzut ekranu 2024-03-30 o 12 18 12" src="https://github.com/skorupcia/car_dealership/assets/136620461/db6e2dfd-240c-4797-9a1b-c4083c512503">
 <img width="1728" alt="Zrzut ekranu 2024-03-30 o 12 19 03" src="https://github.com/skorupcia/car_dealership/assets/136620461/e0046787-bf68-4611-b597-4ef58a27eca3">
 <img width="1728" alt="Zrzut ekranu 2024-03-30 o 12 21 49" src="https://github.com/skorupcia/car_dealership/assets/136620461/4f30d7d5-389c-4c64-a4b0-ed0b7ca46bdf">
+
+## Performance
+<img width="876" alt="Zrzut ekranu 2024-03-30 o 23 24 12" src="https://github.com/skorupcia/car_dealership/assets/136620461/a0a7e99a-3c32-40ae-ab59-08d7cf33e8dd">
