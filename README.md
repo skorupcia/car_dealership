@@ -8,6 +8,8 @@ MySQL: 8.3.0-Arm64
 
 XAMPP: 8.1.2-Arm64
 
+Python: 3.12.2
+
 ## Instruction
 
 1. Install required packages
