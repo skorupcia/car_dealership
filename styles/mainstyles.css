@@ -1,134 +1,126 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 body {
-font-family: "Roboto", sans-serif;  
-margin: 10px 0 0 0;
-text-align: center;
-background-image: url("carbg.webp")
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0 0 0;
+  text-align: center;
+  background-image: url("carbg.webp");
 }
-nav{
-display: flex;
-width: auto;
-height: auto;
-margin: auto;
-max-width: 900px;
-justify-content: space-between;
-text-align: center;
-list-style-type: none;
-background: rgba(29, 37, 50, .9);
-border-radius: 10px;
+nav {
+  display: flex;
+  width: auto;
+  height: auto;
+  margin: auto;
+  max-width: 900px;
+  justify-content: space-between;
+  text-align: center;
+  list-style-type: none;
+  background: rgba(29, 37, 50, 0.9);
+  border-radius: 10px;
 }
 a {
-padding: 1rem 2rem 1.15rem;
-text-transform: uppercase;
-cursor: pointer;
-color: #ebebeb;
-min-width: 80px;
-list-style-type: none;
-text-decoration: none;
+  padding: 1rem 2rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ebebeb;
+  min-width: 80px;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 a:hover {
-background-color: grey;
-background-size: 100% 100%;
-color: #27262c;
-animation: spring 300ms ease-out;
-text-shadow: 0 -1px 0 #8c8c8c;
-font-weight: bold;
-border-radius: 10px;
+  background-color: grey;
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #8c8c8c;
+  font-weight: bold;
+  border-radius: 10px;
 }
 a:active {
-transform: translateY(4px);
+  transform: translateY(4px);
 }
 
 @keyframes spring {
-15% {
--webkit-transform-origin: center center;
--webkit-transform: scale(1.2, 1.1);
-}
-40% {
--webkit-transform-origin: center center;
--webkit-transform: scale(0.95, 0.95);
-}
-75% {
--webkit-transform-origin: center center;
--webkit-transform: scale(1.05, 1);
-}
-100% {
--webkit-transform-origin: center center;
--webkit-transform: scale(1, 1);
-}
-}
-
-.shameless-plug{
-position: absolute;
-bottom: 10px;
-right: 0;
-padding: 8px 20px;
-color: #ccc;
-text-decoration: none;
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
 }
 
-.header{
-background-image: url(bmwm3.webp);
-position: relative;
-text-align: center;
-width: 90%;
-height: 750px;
-margin: auto;
-border-radius: 20px;
+.shameless-plug {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  padding: 8px 20px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.header {
+  background-image: url(bmwm3.webp);
+  position: relative;
+  text-align: center;
+  width: 90%;
+  height: 750px;
+  margin: auto;
+  border-radius: 20px;
 }
 
 .top-left {
-background: rgba(29, 37, 50, .65);
-position: absolute;
-top: 270px;
-left: 60px;
-border-radius: 20px;
-padding: 30px 20px 30px 20px;
+  background: rgba(29, 37, 50, 0.65);
+  position: absolute;
+  top: 270px;
+  left: 60px;
+  border-radius: 20px;
+  padding: 30px 20px 30px 20px;
 }
 
 .niezawodni {
-font-size: 35px;
-color: white;
-font-weight: bold;
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
 }
 
-.poznaj{
-color: #52bd9f;
+.poznaj {
+  color: #52bd9f;
 }
 
-.middle{
-background: white;
-width: 90%;
-text-align: center;
-margin: auto;
-border-radius: 20px;
-height: 80px;
-}
-.logos{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-align-content: center;
-padding: 10px;
-gap: 30px;
+.logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  gap: 30px;
 }
 
 .footer {
-margin: auto;
-width: auto;
-position: relative;
-min-height: 60px;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+  margin: auto;
+  width: auto;
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer p {
-color: #fff;
-font-size: 15px;
-font-weight: 300;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
 }

@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="car_dealership">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Krzysztof Skorupski">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <title>Zaloguj</title>
-    <link rel="stylesheet" href="styles/loginstyles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#loginForm').submit(function(e){
-                e.preventDefault();
+  <meta charset="UTF-8">
+  <meta name="description" content="car_dealership">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Krzysztof Skorupski">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <title>Zaloguj</title>
+  <link rel="stylesheet" href="styles/loginstyles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#loginForm').submit(function (e) {
+        e.preventDefault();
 
-                var username = $('#username').val();
-                var password = $('#password').val();
+        var username = $('#username').val();
+        var password = $('#password').val();
 
-                $.ajax({
-                    type: 'POST',
-                    url: 'login.php',
-                    data: {username: username, password: password},
-                    success: function(response){
-                        if (response === 'zalogowano!') {
-                            window.location.href = 'main.html';
-                        } else {
-                            $('#error').html(response);
-                        }
-                    }
-                });
-            });
+        $.ajax({
+          type: 'POST',
+          url: 'login.php',
+          data: { username: username, password: password },
+          success: function (response) {
+            if (response === 'zalogowano!') {
+              window.location.href = 'main.html';
+            } else {
+              $('#error').html(response);
+            }
+          }
         });
-    </script>
+      });
+    });
+  </script>
 </head>
+
 <body>
   <div class="login-page">
     <div class="form">
       <form class="loginform" id="loginForm">
-        <input type="text" id="username" placeholder="login"/>
-        <input type="password" id="password" placeholder="haslo"/>
+        <input type="text" id="username" placeholder="login" />
+        <input type="password" id="password" placeholder="haslo" />
         <button type="submit">Zaloguj</button>
-        <p class="message"><a href="register.html">Zarejestruj</a><br>Nie chcesz być zalogowany? <a href="main.html">Strona główna</a></p>
+        <p class="message"><a href="register.html">Zarejestruj</a><br>Nie chcesz być zalogowany? <a
+            href="main.html">Strona główna</a></p>
         <div id="error" style="color: red; font-size: 13px; margin-top: 10px; font-weight: bold;"></div>
       </form>
     </div>
   </div>
-    <footer class="footer">
-        <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
+  </footer>
 </body>
+
 </html>

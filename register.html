@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="car_dealership">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Krzysztof Skorupski">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <title>Register</title>
-    <link rel="stylesheet" href="styles/registerstyles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#registerForm').submit(function(e){
-                e.preventDefault();
-                var username = $('#username').val();
-                var password = $('#password').val();
 
-                $.ajax({
-                    type: 'POST',
-                    url: 'rdata.php',
-                    data: {username: username, password: password},
-                    success: function(response){
-                        $('#responseMessage').html(response);
-                        $('#username').val('');
-                        $('#password').val('');
-                    }
-                });
-            });
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="car_dealership">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Krzysztof Skorupski">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <title>Register</title>
+  <link rel="stylesheet" href="styles/registerstyles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#registerForm').submit(function (e) {
+        e.preventDefault();
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        $.ajax({
+          type: 'POST',
+          url: 'rdata.php',
+          data: { username: username, password: password },
+          success: function (response) {
+            $('#responseMessage').html(response);
+            $('#username').val('');
+            $('#password').val('');
+          }
         });
-    </script>
+      });
+    });
+  </script>
 </head>
+
 <body>
   <div class="login-page">
     <div class="form">
@@ -40,7 +42,7 @@
         <button type="submit">Zarejestruj</button>
         <p class="message">Jesteś juz uzytkownikiem? <a href="login.html">Zaloguj</a></p>
       </form>
-      <div id="responseMessage" style="padding: 5px; color: rgb(0, 188, 0);"></div> 
+      <div id="responseMessage" style="padding: 5px; color: rgb(0, 188, 0);"></div>
     </div>
   </div>
   <footer class="footer">
@@ -49,4 +51,5 @@
   <script>
   </script>
 </body>
+
 </html>

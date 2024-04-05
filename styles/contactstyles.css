@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 body {
-  font-family: "Roboto", sans-serif;  
+  font-family: "Roboto", sans-serif;
   text-align: center;
   background-image: url("carbg.webp");
   margin: 10px 0 0 0;
 }
-nav{
+
+nav {
   display: flex;
   width: auto;
   height: auto;
@@ -14,9 +15,10 @@ nav{
   justify-content: space-between;
   text-align: center;
   list-style-type: none;
-  background: rgba(29, 37, 50, .9);
+  background: rgba(29, 37, 50, 0.9);
   border-radius: 10px;
 }
+
 a {
   padding: 1rem 2rem 1.15rem;
   text-transform: uppercase;
@@ -36,30 +38,31 @@ a:hover {
   font-weight: bold;
   border-radius: 10px;
 }
+
 a:active {
   transform: translateY(4px);
 }
 
 @keyframes spring {
-15% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(1.2, 1.1);
-}
-40% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(0.95, 0.95);
-}
-75% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(1.05, 1);
-}
-100% {
-  -webkit-transform-origin: center center;
-  -webkit-transform: scale(1, 1);
-}
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
 }
 
-.shameless-plug{
+.shameless-plug {
   position: absolute;
   bottom: 10px;
   right: 0;
@@ -68,7 +71,8 @@ a:active {
   text-decoration: none;
 }
 
-input[type=text], select {
+input[type="text"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 13px 0;
@@ -76,10 +80,10 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  background: #f2f2f2;;
+  background: #f2f2f2;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
   background-color: black;
   color: white;
@@ -90,7 +94,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #303030;
 }
 
@@ -126,18 +130,18 @@ input[type=submit]:hover {
 }
 
 .footer {
-    margin: auto;
-    width: auto;
-    position: relative;
-    min-height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  margin: auto;
+  width: auto;
+  position: relative;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer p {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 300;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
 }
