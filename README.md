@@ -8,14 +8,13 @@ MySQL: 8.3.0-Arm64
 
 XAMPP: 8.1.2-Arm64
 
-Python: 3.12.2
-
 ## Instruction
 
 1. Install required packages
 2. Copy repository to your XAMPP/htdocs directory
-3. Open PHPmyadmin and import database (Import -> Browse -> select car_database.sql)
-4. Start login server: python3 server.py
+3. Open PHPmyadmin and import databases
+     (Import -> Browse -> select car_database.sql)
+     (Import -> Browse -> select users.sql)
 5. Enjoy!
 
 ## Preview
