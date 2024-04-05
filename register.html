@@ -7,27 +7,24 @@
     <meta name="author" content="Krzysztof Skorupski">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <title>Zaloguj</title>
-    <link rel="stylesheet" href="styles/loginstyles.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/registerstyles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#loginForm').submit(function(e){
+            $('#registerForm').submit(function(e){
                 e.preventDefault();
-
                 var username = $('#username').val();
                 var password = $('#password').val();
 
                 $.ajax({
                     type: 'POST',
-                    url: 'login.php',
+                    url: 'rdata.php',
                     data: {username: username, password: password},
                     success: function(response){
-                        if (response === 'zalogowano!') {
-                            window.location.href = 'main.html';
-                        } else {
-                            $('#error').html(response);
-                        }
+                        $('#responseMessage').html(response);
+                        $('#username').val('');
+                        $('#password').val('');
                     }
                 });
             });
@@ -37,17 +34,19 @@
 <body>
   <div class="login-page">
     <div class="form">
-      <form class="loginform" id="loginForm">
-        <input type="text" id="username" placeholder="login"/>
-        <input type="password" id="password" placeholder="haslo"/>
-        <button type="submit">Zaloguj</button>
-        <p class="message"><a href="register.html">Zarejestruj</a><br>Nie chcesz być zalogowany? <a href="main.html">Strona główna</a></p>
-        <div id="error" style="color: red; font-size: 13px; margin-top: 10px; font-weight: bold;"></div>
+      <form id="registerForm" class="login-form" method="post" action="rdata.php">
+        <input type="text" id="username" name="username" placeholder="login" required>
+        <input type="password" id="password" name="password" placeholder="haslo" required>
+        <button type="submit">Zarejestruj</button>
+        <p class="message">Jesteś juz uzytkownikiem? <a href="login.html">Zaloguj</a></p>
       </form>
+      <div id="responseMessage" style="padding: 5px; color: rgb(0, 188, 0);"></div> 
     </div>
   </div>
-    <footer class="footer">
-        <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
+  </footer>
+  <script>
+  </script>
 </body>
 </html>
