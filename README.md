@@ -15,7 +15,9 @@ XAMPP: 8.1.2-Arm64
 1. Install required packages
 2. Copy repository to your XAMPP/htdocs directory
 3. Open PHPmyadmin and import databases
+   
      (Import -> Browse -> select car_database.sql)
+   
      (Import -> Browse -> select users.sql)
 5. Enjoy!
 
