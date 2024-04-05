@@ -1,5 +1,7 @@
 # Car dealership website with database and search
 
+School project with usage of PHP, MySQL, JavaScript and HTML.
+
 ## Specification
 
 macOS: 14.4.1
