@@ -7,7 +7,7 @@ if (!$conn) {
 
 if (isset($_GET['search'])) {
     $search = mysqli_real_escape_string($conn, $_GET['search']);
-    $sql = "SELECT * FROM cars WHERE make LIKE '%$search%' OR model LIKE '%$search%' OR year LIKE '%$search%'";
+    $sql = "SELECT * FROM cars WHERE make LIKE '%$search%' OR model LIKE '%$search%' OR year LIKE '%$search%' OR price LIKE '%$search%'";
     $result = mysqli_query($conn, $sql);
     $cars = array();
     if (mysqli_num_rows($result) > 0) {
