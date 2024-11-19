@@ -1,0 +1,25 @@
+Debugger listening on ws://127.0.0.1:59219/71ceedd4-204f-4080-82b3-d3de42c21b13
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+
+> cardealership@1.0.0 test
+> jest
+
+Debugger listening on ws://127.0.0.1:59226/72107b3b-b987-4935-ae4d-8189383d80f9
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+ PASS  tests/test.js
+  Testy strony wyszukiwania samochodów
+    ✓ Powinno zawierać poprawne linki w nawigacji (90 ms)
+    ✓ Powinno zawierać formularz wyszukiwania z polem tekstowym i przyciskami (11 ms)
+    ✓ Powinno zawierać przyciski wyszukiwania po markach: BMW, Audi, Mercedes-Benz, Ford (10 ms)
+    ✓ Powinna wywołać funkcję searchByBrand po kliknięciu przycisku marki (13 ms)
+    ✓ Powinno zawierać sekcję na wyniki wyszukiwania o id 'carList' (13 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.755 s, estimated 1 s
+Ran all test suites.
+Waiting for the debugger to disconnect...
+Waiting for the debugger to disconnect...

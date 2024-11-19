@@ -1,0 +1,16 @@
+Debugger listening on ws://127.0.0.1:51354/0027c06b-3ef2-402e-8bd4-cd1eca00dea3
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+ PASS  tests/test.js
+  Testy strony kontaktowej
+    ✓ Powinno zawierać poprawne linki w nawigacji (117 ms)
+    ✓ Powinno zawierać formularz kontaktowy z odpowiednimi polami (21 ms)
+    ✓ Powinno zawierać poprawne opcje w polu 'Powód' (25 ms)
+    ✓ Powinno zawierać sekcję z mapą o poprawnym źródle (16 ms)
+    ✓ Powinno zawierać stopkę z odpowiednią treścią (21 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        0.753 s, estimated 1 s
+Ran all test suites.

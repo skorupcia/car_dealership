@@ -1,0 +1,21 @@
+Debugger listening on ws://127.0.0.1:57334/1269c1ab-1339-42a3-9c2a-d92dfabab644
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+
+> cardealership@1.0.0 test
+> jest
+
+Debugger listening on ws://127.0.0.1:57336/db60763c-e428-489b-bb81-54f5aa32afc7
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+ PASS  tests/test.js
+  Testy strony głównej
+    ✓ Logo load (48 ms)
+    ✓ Nav links check (11 ms)
+    ✓ Footer with appropriate values (12 ms)
+    ✓ Correct page title (10 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.581 s, estimated 1 s
