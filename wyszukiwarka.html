@@ -23,12 +23,20 @@
     </nav>
 
     <h1>Wyszukiwarka samochodów</h1>
-    <form id="searchForm">
-      <input style="color: #000000;" type="text" id="searchInput" placeholder="Szukaj po modelu, marce lub roku">
-      <button type="submit">Szukaj</button>
-      <button type="submit">Wyświetl</button>
-    </form>
-    <div id="carList" class="car-container"></div>
+    <div class="btform">
+      <form id="searchForm" method="GET">
+        <input style="color: #000000;" type="text" id="searchInput" placeholder="Szukaj po marce, rodzaju lub kolorze">
+        <button type="submit">Szukaj</button>
+        <button type="submit">Wyświetl</button>
+      </form>
+      <div class="buttons">
+        <button class="bt" onclick="searchByBrand('BMW')">Bmw</button>
+        <button class="bt" onclick="searchByBrand('Audi')">Audi</button>
+        <button class="bt" onclick="searchByBrand('Mercedes-Benz')">Mercedes-Benz</button>
+        <button class="bt" onclick="searchByBrand('Ford')">Ford</button>
+      </div>
+    </div>
+    <div id="carList" class="car-container" style="margin-top: 10px;"></div>
     <script>
       document.getElementById('searchForm').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -36,7 +44,7 @@
         const formData = new FormData();
         formData.append('search', searchInput);
 
-        fetch(`http://localhost/projekt/proxy.php?search=${searchInput}`)
+        fetch(`proxy.php?search=${searchInput}`)
           .then(response => response.json())
           .then(data => {
             showCars(data);
@@ -61,6 +69,17 @@
                         </div>
                     `;
           carList.appendChild(carDiv);
+        });
+      }
+
+      function searchByBrand(make) {
+      fetch(`proxy.php?search=${make}`)
+        .then(response => response.json())
+        .then(data => {
+          showCars(data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
         });
       }
     </script>
