@@ -14,7 +14,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: Install dependencies
+      - name: Install npm
         run: npm install
+      - name: Intall jsdom
+        run: npm install --save-dev jsdom
       - name: Run Jest
         run: npm test
