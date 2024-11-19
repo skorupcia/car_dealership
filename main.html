@@ -10,10 +10,31 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <title>Strona główna</title>
   <link rel="stylesheet" href="styles/mainstyles.css">
+  <script>
+    this.bmw = 'BMW'
+    this.mercedes = 'Mercedes-Benz'
+    this.audi = 'Audi'
+    this.ford = 'Ford'
+
+    function redirectToSearchPage() {
+        window.location.href = 'wyszukiwarka.html';
+    }
+
+    function executeAfterRedirect() {
+      setTimeout(function() {
+          searchByBrand('BMW');
+      }, 1000);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', executeAfterRedirect);
+    } else {
+        executeAfterRedirect();
+    }
+    
+    </script>
+    
 </head>
-
-<body>
-
   <body>
     <div class="header">
       <nav>
@@ -31,26 +52,27 @@
     </div>
     <div class="logos"
       style="background: white; max-width: 89%; background: white; width: auto; text-align: center; margin: auto; border-radius: 20px;">
-      <img src="carlogo/bmw.webp" height="60px" alt="bmw">
-      <img src="carlogo/aston.webp" height="60px" alt="aston">
-      <img src="carlogo/ferrari.webp" height="60px" alt="ferrari">
-      <img src="carlogo/ford.webp" height="60px" alt="ford">
-      <img src="carlogo/jaguar.webp" height="60px" alt="jaguar">
-      <img src="carlogo/kia.webp" height="60px" alt="kia">
-      <img src="carlogo/lexus.webp" height="60px" alt="lexus">
-      <img src="carlogo/mercedes.webp" height="60px" alt="mercedes">
-      <img src="carlogo/porsche.webp" height="60px" alt="porsche">
-      <img src="carlogo/tesla.webp" height="60px" alt="tesla">
-      <img src="carlogo/volkswagen.webp" height="60px" alt="vw">
-      <img src="carlogo/infinity.webp" height="60px" alt="infinity">
-      <img src="carlogo/volvo.webp" height="60px" alt="volvo">
-      <img src="carlogo/audi.webp" height="60px" alt="audi">
-      <img src="carlogo/bentley.webp" height="60px" alt="bentley">
-      <img src="carlogo/toyota.webp" height="60px" alt="toyota">
+      <a onclick="redirectToSearchPage()"><img src="carlogo/bmw.webp" class="bmw" height="60px" alt="bmw"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/aston.webp" height="60px" alt="aston"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/ferrari.webp" height="60px" alt="ferrari"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/ford.webp" class="ford" height="60px" alt="ford"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/jaguar.webp" height="60px" alt="jaguar"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/kia.webp" height="60px" alt="kia"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/lexus.webp" height="60px" alt="lexus"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/mercedes.webp" class="mercedes" height="60px" alt="mercedes"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/porsche.webp" height="60px" alt="porsche"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/tesla.webp" height="60px" alt="tesla"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/volkswagen.webp" height="60px" alt="vw"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/infinity.webp" height="60px" alt="infinity"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/volvo.webp" height="60px" alt="volvo"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/audi.webp" class="audi" height="60px" alt="audi"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/bentley.webp" height="60px" alt="bentley"></a>
+      <a onclick="redirectToSearchPage()"><img src="carlogo/toyota.webp" height="60px" alt="toyota"></a>
     </div>
     <footer class="footer">
       <p>&copy;2024 Krzysztof Skorupski | All Rights Reserved</p>
     </footer>
+
   </body>
 
 </html>
