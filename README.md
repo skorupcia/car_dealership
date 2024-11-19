@@ -1,3 +1,5 @@
+[![CI](https://github.com/skorupcia/car_dealership/actions/workflows/ci.yml/badge.svg)](https://github.com/skorupcia/car_dealership/actions/workflows/ci.yml)
+
 # Car dealership website with database and search
 
 School project with usage of PHP, MySQL, JavaScript and HTML.
